@@ -61,3 +61,13 @@ and you can use the input function as close holder (i love doing this MacGyver)
 
 ![image](https://github.com/user-attachments/assets/b5a5ea46-99ef-4995-b632-de80ca22a23c)
 
+The class methods return the Console instance, so you can chain the methods for multiple configuration and printing...
+```cpp
+	console.moveCursor(7,30)
+		.setColor(Console::Color::Magenta)
+		.setStyle(Console::Style::Underline)
+		.print("chained configurations...");
+```
+![image](https://github.com/user-attachments/assets/3ea527ee-7bea-4ca8-b9b0-077637bf7410)
+
+
