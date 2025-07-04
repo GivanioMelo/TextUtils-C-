@@ -324,6 +324,30 @@ public:
 		reset();
 		return *this;
 	}
+
+	Console& info(const std::string& text) 
+	{
+		setColor(Color::Cyan).print("Info: ");
+		setColor(Color::White).print(text);
+		reset().print("\n");
+		return *this;
+	}
+
+	Console& warning(const std::string& text)
+	{
+		setColor(Color::Yellow).print("Warning: ");
+		setColor(Color::White).print(text);
+		reset().print("\n");
+		return *this;
+	}
+
+	Console& error(const std::string& text)
+	{
+		setColor(Color::Red).print("Error: ");
+		setColor(Color::White).print(text);
+		reset().print("\n");
+		return *this;
+	}
 };
 
 
