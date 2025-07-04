@@ -58,3 +58,6 @@ and you can use the input function as close holder (i love doing this MacGyver)
 	console.reset();
 }
 ```
+
+![image](https://github.com/user-attachments/assets/b5a5ea46-99ef-4995-b632-de80ca22a23c)
+
