@@ -74,4 +74,11 @@ The class methods return the Console instance, so you can chain the methods for 
 ```
 ![image](https://github.com/user-attachments/assets/3ea527ee-7bea-4ca8-b9b0-077637bf7410)
 
+I added some default threat level outputs ready for action...
+```cpp
+	console.info("This is a totaly fine message, nothing to warry about...");
+	console.warning("Better look at this, bro...");
+	console.error("Oh shit, this ain't look good...");
+```
+![image](https://github.com/user-attachments/assets/e510e5b1-4656-4265-a7fd-f6f173eab10a)
 
