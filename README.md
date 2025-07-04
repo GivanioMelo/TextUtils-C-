@@ -24,6 +24,8 @@ You can use C++ autocast of boolean types in your favor
 	console.print("Bool float: ").printBool(45.5f).print("\n");
 
 ```
+![image](https://github.com/user-attachments/assets/5a837f23-3aa8-47fa-a377-010e2712168f)
+
 
 You can print numeric values using decimal precision easy bizzy
 
@@ -34,6 +36,8 @@ You can print numeric values using decimal precision easy bizzy
 	console.print("Float: ").print(3.14159f).print("\n");
 	console.print("Double: ").print(2.718281828459, 5).print("\n");
 ```
+![image](https://github.com/user-attachments/assets/48e7c78a-5426-4762-ad33-254eb541e8e6)
+
 
 You can draw boxes with simple x,y,w,h parameters...
 and in different styles...
@@ -51,6 +55,7 @@ and in different styles...
 	console.drawBox(82, 15, 20, 10, Console::BoxStyle::Rounded);
 
 ```
+![image](https://github.com/user-attachments/assets/7f9608b4-d4e2-44d4-a3a6-f131e531a362)
 
 and you can use the input function as close holder (i love doing this MacGyver)
 
@@ -59,8 +64,6 @@ and you can use the input function as close holder (i love doing this MacGyver)
 	console.reset();
 }
 ```
-
-![image](https://github.com/user-attachments/assets/b5a5ea46-99ef-4995-b632-de80ca22a23c)
 
 The class methods return the Console instance, so you can chain the methods for multiple configuration and printing...
 ```cpp
