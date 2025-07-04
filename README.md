@@ -10,7 +10,6 @@ You can use it as simple as that...
 int main() 
 {
 	Console console = Console();
-	console.setColor(Console::Color::Green);
 	console.printTitleBox("Eita", Console::Color::White, Console::Color::Red, Console::BoxStyle::Single);
 ```
 ![image](https://github.com/user-attachments/assets/1f3bad29-9874-4df0-abf5-d23abd2968c2)
