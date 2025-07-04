@@ -55,6 +55,7 @@ public:
 		}
 		SetConsoleOutputCP(CP_UTF8);
 		setlocale(LC_ALL,".OCP.utf8");
+		reset();
 	}
 
 	// Set text color
@@ -122,7 +123,8 @@ public:
 	}
 
 	// Print a centered title at the top of the console
-	Console& printTitle(const std::string& title) {
+	Console& printTitle(const std::string& title)
+	{
 		clearScreen();
 
 		int consoleWidth = 80; // Default width if detection fails
@@ -144,7 +146,10 @@ public:
 
 	// Print a centered title in a box at the top of the console
 	// Print a centered title in a box at the top of the console using box-drawing characters
-	Console& printTitleBox(const std::string& title, Console::BoxStyle style = Console::BoxStyle::Single)
+	Console& printTitleBox(const std::string& title,
+		Color textColor = Color::Default,
+		Color boxColor = Color::Green,
+		BoxStyle style = BoxStyle::Single)
 	{
 		clearScreen();
 
@@ -172,6 +177,7 @@ public:
 
 		// Top border: ╔════════════════════════════╗
 		moveCursor(1, 1);
+		setColor(boxColor);
 		std::cout << charSet.topLeft;
 		for (int i = 0; i < consoleWidth - 2; ++i) std::cout << charSet.horizontal;
 		std::cout << charSet.topRight;
@@ -184,7 +190,9 @@ public:
 		if (spaceAfter < 0) spaceAfter = 0;
 		if (spaceBefore < 0) spaceBefore = 0;
 		for (int i = 0; i < spaceBefore; ++i) std::cout << " ";
+		setColor(textColor);
 		std::cout << title;
+		setColor(boxColor);
 		for (int i = 0; i < spaceAfter; ++i) std::cout << " ";
 		std::cout << charSet.vertical;
 
@@ -193,7 +201,7 @@ public:
 		std::cout << charSet.bottomLeft;
 		for (int i = 0; i < consoleWidth - 2; ++i) std::cout << charSet.horizontal;
 		std::cout << charSet.bottomRight;
-
+		reset();
 		return *this;
 	}
 
@@ -313,6 +321,7 @@ public:
 		for (int i = 0; i < width - 2; ++i) std::cout << charSet.horizontal;
 		std::cout << charSet.bottomRight;
 
+		reset();
 		return *this;
 	}
 };
